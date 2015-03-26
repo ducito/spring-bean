@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="helloWorld" class="vn.smartdev.BeanExample.HelloWorld">
+		<property name="message" value="Hello World!" />
+	</bean>
+	<bean id="singleton" class="vn.smartdev.BeanExample.Singleton"
+		scope="singleton">
+	</bean>
+	<bean id="prototype" class="vn.smartdev.BeanExample.Prototype"
+		scope="prototype">
+	</bean>
+	<bean id="lifeCycle" class="vn.smartdev.BeanExample.LifeCycle"
+		init-method="init" destroy-method="destroy">
+		<property name="message" value="Hello world!"></property>
+	</bean>
+
+	<bean id="hello" class="vn.smartdev.BeanExample.Hello"
+		init-method="init" destroy-method="destroy">
+		<property name="message" value="Hello World!" />
+	</bean>
+
+	<bean class="vn.smartdev.BeanExample.InitHello" />
+
+	<bean id="helloVietnam" class="vn.smartdev.BeanExample.HelloVietnam">
+		<property name="message1" value="Hello Viet Nam!" />
+		<property name="message2" value="Hello Second World!" />
+	</bean>
+	<bean id="helloIndia" class="vn.smartdev.BeanExample.HelloIndia">
+		<property name="message1" value="Hello India!" />
+		<property name="message3" value="Namaste India!" />
+	</bean>
+
+</beans>
